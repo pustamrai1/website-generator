@@ -27,12 +27,19 @@ function MobileNavigation() {
           <div className="container mx-auto px-4 py-4">
             {/* Buttons */}
             <div className="flex flex-col space-y-2   border-border">
-              <Button variant="ghost" asChild className="justify-start">
+              <Button
+                variant="ghost"
+                asChild
+                className="justify-start cursor-pointer hover:text-gray-800"
+              >
                 <Link href="/login" onClick={() => setIsOpen(false)}>
                   Login
                 </Link>
               </Button>
-              <Button asChild className="justify-start">
+              <Button
+                asChild
+                className="justify-start bg-gray-900 cursor-pointer text-gray-100"
+              >
                 <Link href="/signup" onClick={() => setIsOpen(false)}>
                   Sign Up
                 </Link>
