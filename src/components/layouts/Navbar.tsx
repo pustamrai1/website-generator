@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import MobileNavigation from "./mobileNavigation/MobileNavigation";
+import MobileNavigation from "./MobileNavigation";
+
 
 export default function Navbar() {
   return (
