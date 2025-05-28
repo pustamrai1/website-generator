@@ -14,6 +14,27 @@ export default function Navbar() {
             <span className="text-xl font-bold">YourLogo</span>
           </Link>
 
+          <div className="hidden md:flex items-center space-x-8">
+            <a
+              href="#"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Features
+            </a>
+            <a
+              href="#"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              About
+            </a>
+            <a
+              href="#"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Contact
+            </a>
+          </div>
+
           {/* Buttons */}
           <div className="hidden md:flex items-center space-x-2">
             <Button
