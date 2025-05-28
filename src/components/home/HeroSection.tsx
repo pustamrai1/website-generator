@@ -24,7 +24,7 @@ function HeroSection() {
             Create stunning websites and applications with our powerful
             platform. Fast, secure, and designed for the modern web.
           </p>
-          {/* <p>Test ci</p> */}
+          <p>Test ci</p>
         </div>
       </div>
     </section>
