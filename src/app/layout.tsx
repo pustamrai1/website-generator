@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Footer from "@/components/layouts/Footer";
 import Navbar from "@/components/layouts/Navbar";
+import { ClerkProvider, ClerkLoaded, ClerkLoading } from "@clerk/nextjs";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,16 +27,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <div className="sm:px-36 bg-gray-200 min-h-screen max-w-[1400px] mx-auto px-3 pt-4">
-          <Navbar />
-          <div className="min-h-screen">{children}</div>
-          <Footer />
-        </div>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          <ClerkLoading>
+            <div className="flex items-center justify-center min-h-screen text-2xl">
+              LOADING...
+            </div>
+          </ClerkLoading>
+
+          <ClerkLoaded>
+            <div className="sm:px-36 bg-gray-200 min-h-screen max-w-[1400px] mx-auto px-3 pt-4">
+              <Navbar />
+              <div className="min-h-screen">{children}</div>
+              <Footer />
+            </div>
+          </ClerkLoaded>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
