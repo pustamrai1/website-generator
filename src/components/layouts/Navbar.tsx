@@ -11,8 +11,7 @@ import {
 
 export default function Navbar() {
   return (
-    <nav className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 fixed z-10 left-20 right-20">
-      {/* testing git branch */}
+    <nav className="shadow-lg bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 fixed z-10 left-20 right-20">
       <div className="container w-full  mx-auto px-1">
         <div className="flex h-16 w-full items-center justify-between">
           {/* Logo */}
@@ -21,24 +20,24 @@ export default function Navbar() {
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
-            <a
-              href="#"
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            <Link
+              className="text-sm font-medium hover:underline underline-offset-4"
+              href="#features"
             >
               Features
-            </a>
-            <a
-              href="#"
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            </Link>
+            <Link
+              className="text-sm font-medium hover:underline underline-offset-4"
+              href="#how-it-works"
             >
-              About
-            </a>
-            <a
-              href="#"
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              How it Works
+            </Link>
+            <Link
+              className="text-sm font-medium hover:underline underline-offset-4"
+              href="#pricing"
             >
-              Contact
-            </a>
+              Pricing
+            </Link>
           </div>
 
           {/* Buttons */}
