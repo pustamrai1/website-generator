@@ -1,30 +1,48 @@
 import React from "react";
 import { Badge } from "@/components/ui/badge";
-import { Star } from "lucide-react";
+import { Button } from "@/components/ui/button";
+// import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Sparkles, ArrowRight, Check } from "lucide-react";
 
 function HeroSection() {
   return (
-    <section className="relative py-20 sm:py-32 min-h-screen">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-10">
-        <div className="text-center max-w-4xl mx-auto">
-          <Badge variant="secondary" className="mb-6">
-            <Star className="w-3 h-3 mr-1" />
-            New features available
-          </Badge>
-
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-6">
-            Build Amazing
-            <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-              {" "}
-              Digital Experiences
-            </span>
-          </h1>
-
-          <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            Create stunning websites and applications with our powerful
-            platform. Fast, secure, and designed for the modern web.
-          </p>
-          <p>Test ci</p>
+    <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
+      <div className="container px-4 md:px-6">
+        <div className="flex flex-col justify-between items-center space-y-4">
+          <div className="space-y-2">
+            <Badge variant="outline" className="w-fit">
+              <Sparkles className="w-3 h-3 mr-1" />
+              No Code Required
+            </Badge>
+            <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+              Build Stunning Websites <br />
+              within Few Minutes.
+            </h1>
+            <p className="max-w-[600px] text-muted-foreground md:text-xl mt-4">
+              Create professional websites in minutes. Simply add text, add
+              components, and watch your vision come to life. No coding skills
+              needed.
+            </p>
+          </div>
+          <div className="flex flex-col gap-2 min-[400px]:flex-row mt-16">
+            <Button
+              size="lg"
+              className="h-12 px-8 bg-blue-500 text-gray-50 font-semibold hover:bg-blue-600 cursor-pointer"
+            >
+              Start your free trial
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </div>
+          <div className="flex items-center gap-4 text-sm text-muted-foreground">
+            <div className="flex items-center gap-1">
+              <Check className="h-4 w-4 text-green-500" />
+              Free forever plan
+            </div>
+            <div className="flex items-center gap-1">
+              <Check className="h-4 w-4 text-green-500" />
+              Zero tech skills needed
+            </div>
+          </div>
         </div>
       </div>
     </section>
