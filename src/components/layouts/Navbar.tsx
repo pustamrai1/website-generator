@@ -49,13 +49,13 @@ export default function Navbar() {
                   variant="outline"
                   className="border-blue-600 text-blue-600 hover:bg-blue-50"
                 >
-                  Sign In
+                  Login
                 </Button>
               </SignInButton>
 
               <SignUpButton>
                 <Button className="bg-blue-500 hover:bg-blue-600">
-                  Sign Up
+                  Register
                 </Button>
               </SignUpButton>
             </SignedOut>
