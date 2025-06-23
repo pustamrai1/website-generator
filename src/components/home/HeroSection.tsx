@@ -6,8 +6,8 @@ import { Sparkles, ArrowRight, Check } from "lucide-react";
 
 function HeroSection() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
-      <div className="container px-4 md:px-6">
+    <section className="w-full py-12 sm:py-26">
+      <div className="container ">
         <div className="flex flex-col justify-between items-center space-y-4">
           <div className="space-y-2">
             <Badge variant="outline" className="w-fit">
