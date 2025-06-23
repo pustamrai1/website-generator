@@ -11,8 +11,8 @@ import {
 
 export default function Navbar() {
   return (
-    <nav className="shadow-lg bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 fixed z-10 left-20 right-20">
-      <div className="container w-full  mx-auto px-1">
+    <nav className="shadow-lg bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 fixed z-10 left-5 right-5 md:left-20 md:right-20">
+      <div className="container w-full   px-1">
         <div className="flex h-16 w-full items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">

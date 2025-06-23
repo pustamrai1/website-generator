@@ -41,7 +41,7 @@ export default function RootLayout({
           <ClerkLoaded>
             <div className="sm:px-36 bg-gray-200 min-h-screen max-w-[1400px] mx-auto px-3 pt-4">
               <Navbar />
-              <div className="min-h-screen">{children}</div>
+              <div className="min-h-screen sm:px-6 mt-14 ">{children}</div>
               <Footer />
             </div>
           </ClerkLoaded>
