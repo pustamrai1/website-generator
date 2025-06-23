@@ -1,6 +1,6 @@
 import React from "react";
-import HeroSection from "@/components/home/HeroSection";
-import FeatureSection from "@/components/home/FeatureSection";
+import HeroSection from "@/components/HeroSection";
+import FeatureSection from "@/components/FeatureSection";
 
 export default function Homepage() {
   return (
