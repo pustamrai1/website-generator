@@ -1,6 +1,7 @@
 import React from "react";
 import HeroSection from "@/components/HeroSection";
 import FeatureSection from "@/components/FeatureSection";
+import HowItWorks from "@/components/HowItWorks";
 
 export default function Homepage() {
   return (
@@ -10,6 +11,9 @@ export default function Homepage() {
 
       {/* Features Section */}
       <FeatureSection />
+
+      {/* How It Works Section */}
+      <HowItWorks />
     </div>
   );
 }
