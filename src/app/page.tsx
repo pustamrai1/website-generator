@@ -2,6 +2,7 @@ import React from "react";
 import HeroSection from "@/components/HeroSection";
 import FeatureSection from "@/components/FeatureSection";
 import HowItWorks from "@/components/HowItWorks";
+import PricingSection from "@/components/PricingSection";
 
 export default function Homepage() {
   return (
@@ -14,6 +15,9 @@ export default function Homepage() {
 
       {/* How It Works Section */}
       <HowItWorks />
+
+      {/* Pricing Section */}
+      <PricingSection />
     </div>
   );
 }
