@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import MobileNavigation from "./MobileNavigation";
@@ -8,8 +9,42 @@ import {
   SignedOut,
   UserButton,
 } from "@clerk/nextjs";
+import { useEffect } from "react";
 
 export default function Navbar() {
+  useEffect(() => {
+    // Add smooth scrolling behavior to html element
+    document.documentElement.style.scrollBehavior = "smooth";
+
+    // Handle navigation clicks
+    const handleNavClick = (e: Event) => {
+      const target = e.target as HTMLAnchorElement;
+      if (target.hash) {
+        e.preventDefault();
+        const element = document.querySelector(target.hash);
+        if (element) {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      }
+    };
+
+    // Add event listeners to navigation links
+    const navLinks = document.querySelectorAll('nav a[href^="#"]');
+    navLinks.forEach((link) => {
+      link.addEventListener("click", handleNavClick);
+    });
+
+    // Cleanup
+    return () => {
+      navLinks.forEach((link) => {
+        link.removeEventListener("click", handleNavClick);
+      });
+    };
+  }, []);
+
   return (
     <nav className="shadow-lg bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 fixed z-10 left-5 right-5 md:left-20 md:right-20 max-w-[1400px] mx-auto lg:px-10">
       <div className="container w-full   px-1">
